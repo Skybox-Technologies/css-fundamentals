@@ -59,5 +59,42 @@
 
         <footer>Solution: Apply <b>position: sticky</b> to the box and give it a top offset of <b>top: 50px</b> to make it start to stick 20px below the 30px tall header.</footer>
     </section>
+
+    <h3>Alternatives to position</h3>
+    <section>
+        <p>Here, we want to center the box, but due to external constraints, we don't want to use relative positioning. Try leveraging <b>margin</b> instead.</p>
+        <span class="note">(Percentage-wise margin values are in relation to the container - not the element itself)</span>
+
+        <div class="container">
+            <div class="box" style="margin: 20% auto"></div>
+        </div>
+
+        <footer>Solution: Apply <b>margin: 20% auto</b> to the box</footer>
+    </section>
+
+    <section>
+        <p>In this case, we have a few boxes in a row. Try shifting the middle one towards the right and the bottom by half of its size in both directions using <b>transform: translate</b>.</p>
+        <span class="note">(Remember: <b>transform</b> doesn't affect the document flow and works in relation to the element itself, <b>not</b> its parent)</span>
+
+        <div class="container">
+            <div class="box inline-block"></div>
+            <div class="box inline-block"></div>
+            <div class="box inline-block" style="transform: translateX(50%) translateY(50%);"></div>
+            <div class="box inline-block"></div>
+            <div class="box inline-block"></div>
+        </div>
+
+        <footer>Solution: Apply <b>transform: translateX(50%) translateY(50%)</b> to the box</footer>
+    </section>
+
+    <section>
+        <p>The best and most precise way of centering content nowadays is with the combination of offset controls in conjunction with <b>translate: transform</b>. Can you center the box using these methods?</p>
+
+        <div class="container">
+            <div class="box" style="position: relative; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%)"></div>
+        </div>
+
+        <footer>Solution: Apply <b>position: relative; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%)</b> to the box</footer>
+    </section>
 </body>
 </html>

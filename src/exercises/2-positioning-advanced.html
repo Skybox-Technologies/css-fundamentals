@@ -51,5 +51,42 @@
             </div>
         </div>
     </section>
+
+    <h3>Alternatives to position</h3>
+    <section>
+        <p>Here, we want to center the box, but due to external constraints, we don't want to use relative positioning. Try leveraging <b>margin</b> instead.</p>
+        <span class="note">(Percentage-wise margin values are in relation to the container - not the element itself)</span>
+
+        <div>
+            <div class="container">
+                <div class="box" style=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p>In this case, we have a few boxes in a row. Try shifting the middle one towards the right and the bottom by half of its size in both directions using <b>transform: translate</b>.</p>
+        <span class="note">(Remember: <b>transform</b> doesn't affect the document flow and works in relation to the element itself, <b>not</b> its parent)</span>
+
+        <div>
+            <div class="container">
+                <div class="box inline-block"></div>
+                <div class="box inline-block"></div>
+                <div class="box inline-block" style=""></div>
+                <div class="box inline-block"></div>
+                <div class="box inline-block"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p>The best and most precise way of centering content nowadays is with the combination of offset controls in conjunction with <b>translate: transform</b>. Can you center the box using these methods?</p>
+
+        <div>
+            <div class="container">
+                <div class="box" style=""></div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
