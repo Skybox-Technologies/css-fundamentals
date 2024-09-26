@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Exercises</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="1-positioning-styles.css" />
+</head>
+<body>
+    <h1>Positioning exercises</h1>
+
+    <h3>Basics</h3>
+    <section>
+        <p>Here, the items are stacked vertically. Why is that? Can you update the code so they stack horizontally in a row <b><i>without</i></b> applying any styling?</p>
+
+        <div>
+            <span>Item 1</span>
+            <span>Item 2</span>
+            <span>Item 3</span>
+        </div>
+        <footer>Solution: Update <b>p</b> tags to be <b>span</b> tags</footer>
+    </section>
+
+    <section>
+        <p>That button looks funky at the end of the title - can you break it down onto its own line without using styling?</p>
+
+        <div>
+            <h2>Don't you dare click it!</h2>
+            <button onclick="alert('I told you not to click it!')">Click me!</button>
+        </div>
+        <footer>Solution: Move the button out of the block-level <b>h2</b>. Optionally, wrap it in another block-level element for more predictable behaviour.</footer>
+    </section>
+
+    <h3>Now, with the <b>display</b> property.</h3>
+    <section>
+        <p>You can type directly within the <b>style</b> tags on the elements themselves.</p>
+
+        <div>
+            <p style="display: inline">Item 1</p>
+            <p style="display: inline">Item 2</p>
+            <p style="display: inline">Item 3</p>
+        </div>
+        <footer>Solution: Add "display: inline" to <b>p</b> tags</footer>
+    </section>
+
+    <section class="broken-windows">
+        <p>The styling in the inline elments below is not applying properly - can you fix it?</p>
+        <span class="note">(Don't worry about it looking goofy - just make sure the stated changes apply!)</span>
+
+        <div>
+            <h2>We have some <span style="display: inline-block;">amazing</span> offers over here!</h2>
+            <p>You should really click this <a href="#" style="display: inline-block;">link</a>!</p>
+        </div>
+
+        <footer>Solution: Add "display: inline-block" to <b>span</b>-tag and <b>a</b>-tag</footer>
+    </section>
+</body>
+</html>

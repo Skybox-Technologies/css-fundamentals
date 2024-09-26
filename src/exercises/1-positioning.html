@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Exercises</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="1-positioning-styles.css" />
+</head>
+<body>
+    <h1>Positioning exercises</h1>
+    <h3>Basics</h3>
+
+    <section>
+        <p>Here, the items are stacked vertically. Why is that? Can you update the code so they stack horizontally in a row <b><i>without</i></b> applying any styling?</p>
+
+        <div>
+            <p>Item 1</p>
+            <p>Item 2</p>
+            <p>Item 3</p>
+        </div>
+    </section>
+
+    <section>
+        <p>That button looks funky at the end of the title - can you break it down onto its own line without using styling?</p>
+
+        <div>
+            <h2>Don't you dare click it!<button onclick="alert('I told you not to click it!')">Click me!</button></h2>
+        </div>
+    </section>
+
+    <h3>Now, with the <b>display</b> property.</h3>
+    <section>
+        <p>You can type directly within the <b>style</b> tags on the elements themselves.</p>
+
+        <div>
+            <p style="">Item 1</p>
+            <p style="">Item 2</p>
+            <p style="">Item 3</p>
+        </div>
+    </section>
+
+    <section class="broken-windows">
+        <p>The styling in the inline elments below is not applying properly - can you fix it?</p>
+        <span class="note">(Don't worry about it looking goofy - just make sure the stated changes apply!)</span>
+
+        <div>
+            <h2>We have some <span style="">amazing</span> offers over here!</h2>
+            <p>You should really click this <a href="#" style="">link</a>!</p>
+        </div>
+    </section>
+</body>
+</html>

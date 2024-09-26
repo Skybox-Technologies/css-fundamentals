@@ -33,7 +33,7 @@ As the internet developed, people got creative and craved more options to contro
 CSS stands for Cascading Style Sheets and it works by introducing an incredibly flexible, hierarchical system of rule definitions to act on your HTML tags. This enormous flexibility is simultaneously CSS's greatest strength and biggest pitfall. The rules are fairly simple, but the results in practice can often become extremely convoluted due to the amount of rules that (un)intentionally act upon any element in the document.
 
 The main rules of CSS are as follows:
-- Rules applied to a parent element cascade down to (affect) all child elements below it, and
+- Rules applied to a parent element (most of them...) cascade down to affect all child elements below it, and
 - In case of conflicting rules, the rule with the greatest specificity wins.
 
 Specificity is a measure of how specific a rule is. For instance, a very generic rule like
@@ -118,7 +118,7 @@ What does that mean?
 
 It means whenever you create a space with `display: flex`, you should consider that space a 2D coordinate system with a horizontal x-axis and a vertical y-axis. `flex` maps those to a primary (reference) axis and a secondary axis. By default (`flex-direction: row`), the x-axis is the main axis and the y-axis is the secondary axis. You can flip those around with `flex-direction: column`. All additional properties you apply are in relation to either the main or secondary axis and will flip from horizontal to vertical and vice versa based on the `flex-direction`.
 
-Furthermore, you can reverse the order the elements are rendered in by appending a `-reverse` to the `flex-direction` - for instance `flex-direction: row-reverse` or `flex-direction: colunn-reverse`.
+Furthermore, you can reverse the order the elements are rendered in by appending a `-reverse` to the `flex-direction` - for instance `flex-direction: row-reverse` or `flex-direction: column-reverse`.
 
 Another aspect of `flex` that's important to understand is `flex-wrap`. By default, a `flex` context will **not** wrap, meaning it will always attempt to squeeze all elements into the same row regardless of what properties those elements have on them. `width` and `height` **are not respected** so long as the `flex` parent is not wrapping. Once told to `wrap`, however, this changes and styling on the child element is suddenly respected.
 
@@ -140,7 +140,7 @@ Resources:
 
 ### Grid
 
-A grid can be thought of as a hyper-dynamic table, which you get to size exactly as you like (irregularly is an option). You can also define and assign zones in the form of heat-maps to your elements to fill out. It's a much more fluid and powerful option for managing a larger area than `flex`, in my opinion. Inverse to `flex`, `grid`s cannot flip axial orientation.
+A grid can be thought of as a hyper-dynamic table, which you get to size exactly as you like (irregularly is an option). You can also define and assign zones in the form of area maps to your elements to fill out. It's a much more fluid and powerful option for managing a larger area than `flex`, in my opinion. Inverse to `flex`, `grid`s cannot flip axial orientation.
 
 Much like with `flex`, a `grid` is defined on the parent container element. Defining the property on its own doesn't do much, until you tell it how to make your grid. You define this with `grid-template-columns` and `grid-template-rows`.
 
@@ -155,14 +155,14 @@ If you intend for all of your entries to share the same size, you can short-hand
 
 Once you have your template defined, your individual elements can be made to fill more than one cell with `col-span` and `row-span`, if desired.
 
-Alternatively, heat maps can be defined to automatically resize child elements based on where they belong in the heat map. For instance:
+Alternatively, area maps can be defined to automatically resize child elements based on where they belong in the area map. For instance:
 
 ```
 grid-template-areas: "header header header header"
                      "main main . sidebar"
                      "footer footer footer footer"
 ```
-This allows you to assign `grid-area` to child elements and have them snap to the boundaries you have defined - such as `grid-area: header`. Note that `.` means a dead zone, where nothing is supposed to be assigned. Also note that the above grid will not take effect without _also_ defining the template for the rows and cols as previously specified - as the `grid` wouldn't know inherently from the heat map how to size each area on its own.
+This allows you to assign `grid-area` to child elements and have them snap to the boundaries you have defined - such as `grid-area: header`. Note that `.` means a dead zone, where nothing is supposed to be assigned. Also note that the above grid will not take effect without _also_ defining the template for the rows and cols as previously specified - as the `grid` wouldn't know inherently from the area map how to size each area on its own.
 
 In common with `flex`, `grid` shares `justify-content` and `align-items`. Both of these properties work conceptually the same, except `justify-content` applies within the boundaries of the cells and not on a row level.
 
