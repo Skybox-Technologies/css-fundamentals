@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        section {
+            margin-bottom: 40px;
+        }
+        section > div {
+            margin-bottom: 5px;
+        }
+
+        div {
+            background-color: yellow;
+            outline: 1px solid orange;
+            padding: 10px;
+        }
+
+        div > div {
+            background-color: aqua;
+            outline: 1px solid teal;
+        }
+
+        div > div > div {
+            background-color: violet;
+            outline: 1px solid orchid;
+        }
+
+        div > .neg-margin {
+            background: rosybrown;
+            margin: -30px 0 0 -30px;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.8);
+        }
+
+        div > .translate {
+            transform: translateX(30px) translateY(30px);
+            background: green;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.8);
+        }
+
+        div > span {
+            background-color: orange;
+            outline: 1px solid red;
+            margin: 0 2.5px;
+            padding: 10px;
+            height: 45px;
+        }
+
+        .flex > div > span:first-child {
+            width: 200px;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+        .block {
+            display: block;
+        }
+
+        .flex > div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .grid > div {
+            display: grid;
+            grid-template-columns: 1fr 10% 320px 1fr 6rem;
+        }
+
+        .grid > div > span:first-child {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Here is a nice title! (block-level)<span>...and a little addendum in an in-line span!</span></h1>
+    <p>A paragraph is <i>also</i> a <b>block-level</b> element, <a href="#">but an anchor is in-line</a></p>
+
+    <section>
+
+        <div>1</div>
+        <div>2
+            <div>3
+                <div>4
+                    <span>5 inline</span>
+                    <span class="inline-block">6 inline-block</span>
+                    <button>Muh btn!!</button>
+                    <ul>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                    </ul>
+                    <span>Something...</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>My col1</td>
+                                <td>My col2</td>
+                                <td>My col3</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p>Inline</p>
+        <div>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span class="neg-margin">Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span class="translate">Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+        </div>
+        <p>Inline-Block</p>
+        <div>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block neg-margin">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block translate">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+        </div>
+        <p>Block</p>
+        <div>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block neg-margin">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block translate">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+        </div>
+    </section>
+
+    <section class="flex">
+        <p>Inline with Flex</p>
+        <div>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span class="neg-margin">Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span class="translate">Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+        </div>
+        <p>Inline-block with Flex</p>
+        <div>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block neg-margin">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block translate">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+        </div>
+        <p>Block</p>
+        <div>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block neg-margin">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block translate">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+        </div>
+    </section>
+
+    <section class="grid">
+        <p>Inline with Grid</p>
+        <div>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span class="neg-margin">Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span class="translate">Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+            <span>Hello world!</span>
+        </div>
+        <p>Inline-block with Grid</p>
+        <div>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block neg-margin">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block translate">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+            <span class="inline-block">Hello world!</span>
+        </div>
+        <p>Block with Grid</p>
+        <div>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block neg-margin">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block translate">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+            <span class="block">Hello world!</span>
+        </div>
+    </section>
+</body>
+</html>
