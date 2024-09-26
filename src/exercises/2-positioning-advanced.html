@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Exercises</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="2-positioning-advanced-styles.css" />
+</head>
+<body>
+    <h1>Advanced positioning exercises</h1>
+    <h3>The position property</h3>
+
+    <section>
+        <p>We want the colored box to be roughly in the center while keeping it in the regular document flow. Can you fix it?</p>
+        <span class="note">(Reminder: <b>position relative</b> unlocks offset controls)</span>
+
+        <div>
+            <div class="container">
+                <div class="box" style=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p>The boss says it's okay to remove the box from the normal document flow. He still wants it centered. Ideas?</p>
+
+        <div>
+            <div class="container" style="">
+                <div class="box" style=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p>Okay, nevermind! The box should actually be a sticky header! It should take up the whole width of the browser window and only have a height of 30px. and stick to the top of the page... can you fix it?</p>
+
+        <div>
+            <div class="box" style=""></div>
+        </div>
+    </section>
+
+    <section>
+        <p>So... this box needs to be within the boundaries of the container, but it needs to stick to the top of the page, 20px below the header, when scrolling until the container scrolls out of view, at which point it shoud follow the container out of view.</p>
+
+        <div>
+            <div style="height: 2000px;">
+                <div class="container" style="">
+                    <div class="box" style=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
