@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouting Exercises</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="3-layouting-flex-styles.css" />
+</head>
+<body>
+    <h1>Layouting exercises</h1>
+    <h3>Grid</h3>
+
+    <section>
+        <p>Let's arrange these boxes neatly in an evenly spread 5 by 3 grid!</p>
+
+        <div>
+            <div class="container" style="display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(3, 1fr); gap: 10px;">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+
+        <footer>Solution: Apply <b>display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(3, 1fr); gap: 10px;</b> to the container to define the grid.</footer>
+    </section>
+
+    <section>
+        <p>Let's mix it up! Col 1 should be 1fr, col 2 should be a fixed 100px, col 3 should be 30%, col 4 should be 10em and let col 5 be 2fr! Meanwhile, let's make the first row 5rem tall, the second row 250px tall and the third row 1fr. Let's put a gap of 10px and have the boxes stretch to fill out each cell!</p>
+        <span class="note">(You might have to unset the width and height on the boxes themselves to achieve the requested result)</span>
+
+        <div>
+            <div class="container" style="display: grid; gap: 10px; grid-template-columns: 1fr 100px 30% 10em 2fr; grid-template-rows: 5rem 250px 1fr;">
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto;"></div>
+            </div>
+        </div>
+        <footer>Solution: Apply <b>display: grid; grid-template-columns: 1fr 100px 30% 10em 2fr; grid-template-rows: 5rem 250px 1fr; gap: 10px;</b> to the container to define the grid.</footer>
+    </section>
+
+    <section>
+        <p>Time to try an area map! Given a 5 by 5 grid (you may define the template as you like), define an area template that reserves the top row for a <b>header</b>, the bottom row for a <b>footer</b>, the 3 left-most cells in the middle rows as the <b>sidebar</b> and the rest as the <b>main</b> content areas. Assign our four boxes to their designated areas.</p>
+        <span class="note">(You might have to unset the width and height on the boxes themselves to achieve the requested result)</span>
+
+        <div>
+            <div class="container" style="display: grid; gap: 10px; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(5, 1fr); grid-template-areas: 'header header header header header' 'sidebar main main main main' 'sidebar main main main main' 'sidebar main main main main' 'footer footer footer footer footer'">
+                <div class="box" style="place-self: stretch; width: auto; height: auto; grid-area: header"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto; grid-area: sidebar"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto; grid-area: main"></div>
+                <div class="box" style="place-self: stretch; width: auto; height: auto; grid-area: footer"></div>
+            </div>
+        </div>
+
+        <footer>Solution: Apply <b>display: grid;</b>, define the template columns and rows, then add a <b>grid-template-areas</b> definition and assign the <b>grid-area</b>s to the cells</footer>
+    </section>
+
+    <section>
+        <p>Let's quickly explore how <b>grid</b> can be used to center an element, too!</p>
+
+        <div>
+            <div class="container" style="display: grid; justify-content: center; align-items: center;">
+                <div class="box"></div>
+            </div>
+        </div>
+
+        <footer>Solution: As with <b>flex</b>, we can use <b>justify-content: center</b> and <b>align-items: center</b> to achieve perfect centering with <b>grid</b>!</footer>
+    </section>
+</body>
+</html>

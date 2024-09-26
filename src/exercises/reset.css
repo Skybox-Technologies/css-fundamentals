@@ -46,3 +46,16 @@ button {
     border: none;
     border-radius: 5px;
 }
+
+.container {
+    width: 100%;
+    min-height: 500px;
+    border: 1px solid cyan;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 1px solid yellow;
+    background: rgba(131, 138, 88, 0.5);
+}
