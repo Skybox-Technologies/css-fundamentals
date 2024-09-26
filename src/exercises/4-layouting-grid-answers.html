@@ -90,5 +90,22 @@
 
         <footer>Solution: As with <b>flex</b>, we can use <b>justify-content: center</b> and <b>align-items: center</b> to achieve perfect centering with <b>grid</b>!</footer>
     </section>
+
+    <section>
+        <p>Just for funzies, let's make a vertical pyramid by layering boxes on top of each other!</p>
+        <span class="note">(Works best if you re-define widths and heights for each box to be ever-decreasing; you pick a size!)</span>
+
+        <div>
+            <div class="container" style="display: grid; place-items: center; grid-template-columns: 1fr; grid-template-rows: 1fr;">
+                <div class="box" style="width: 500px; height: 500px; z-index: 0; grid-row: 1; grid-column: 1;"></div>
+                <div class="box" style="width: 400px; height: 400px; z-index: 1; grid-row: 1; grid-column: 1;"></div>
+                <div class="box" style="width: 300px; height: 300px; z-index: 2; grid-row: 1; grid-column: 1;"></div>
+                <div class="box" style="width: 200px; height: 200px; z-index: 3; grid-row: 1; grid-column: 1;"></div>
+                <div class="box" style="width: 100px; height: 100px; z-index: 4; grid-row: 1; grid-column: 1;"></div>
+            </div>
+        </div>
+
+        <footer>Solution: Apply <b>display: grid; place-items: center;</b> and a template of just 1 <b>row</b> and 1 <b>columns</b> to the container, then specify <b>grid-column: 1</b> and <b>grid-row: 1</b> as the desired column and row for each box to layer the boxes on top of each other.</footer>
+    </section>
 </body>
 </html>
