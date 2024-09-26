@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouting Exercises</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="3-layouting-flex-styles.css" />
+</head>
+<body>
+    <h1>Layouting exercises</h1>
+    <h3>Flex</h3>
+
+    <section>
+        <p>We want the colored boxes arranged in a row with equal spacing between them, centered vertically. Can you do it?</p>
+
+        <div>
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+
+        <footer>Solution: Add <b>display: flex; justify-content: space-between; align-items: center;</b> to the container to arrange the boxes in a row with equal spacing between them and center them vertically.</footer>
+    </section>
+
+    <section>
+        <p>Using <b>flex</b>, center the box.</p>
+
+        <div>
+            <div class="container" style="display: flex; justify-content: center; align-items: center;">
+                <div class="box"></div>
+            </div>
+        </div>
+
+        <footer>Solution: Add <b>display: flex; justify-content: center; align-items: center;</b> to the container to center the box.</footer>
+    </section>
+
+    <section>
+        <p>For this next exercise, align all the boxes along the right-hand and left-hand sides of the container, alternating between sides. Leave a gap of 20px between the boxes.</p>
+
+        <div>
+            <div class="container" style="display: flex; flex-direction: column; align-items: flex-end; gap: 20px;">
+                <div class="box"></div>
+                <div class="box" style="align-self: flex-start;"></div>
+                <div class="box"></div>
+                <div class="box" style="align-self: flex-start;"></div>
+                <div class="box"></div>
+                <div class="box" style="align-self: flex-start;"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+
+        <footer>Solution: Add <b>display: flex; flex-direction: column; align-items: flex-end; gap: 20px;</b> to the container to align the boxes along the right-hand side of the container. Use <b>align-self: flex-start;</b> on every other box to align them along the left-hand side.</footer>
+    </section>
+
+    <section>
+        <p>There are too many boxes for the container, which is crushing them together! How can we fix this, so the boxes keep their intended size?</p>
+
+        <div>
+            <div class="container" style="display: flex; justify-content: center; align-items: center; gap: 5px; flex-wrap: wrap;">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+
+        <footer>Solution: Add <b>flex-wrap: wrap;</b> to the container to break the boxes down onto new lines.</footer>
+    </section>
+</body>
+</html>
